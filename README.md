@@ -53,6 +53,36 @@ flatter_list     = list(itertools.chain.from_iterable(<list>))
 product_of_elems = functools.reduce(lambda out, x: out * x, <collection>)
 list_of_chars    = list(<str>)
 ```
+```
+# The lambda keyword in Python provides a
+# shortcut for declaring small and
+# anonymous functions:
+
+>>> add = lambda x, y: x + y
+>>> add(5, 3)
+8
+
+# You could declare the same add()
+# function with the def keyword:
+
+>>> def add(x, y):
+...     return x + y
+>>> add(5, 3)
+8
+
+# So what's the big fuss about?
+# Lambdas are *function expressions*:
+>>> (lambda x, y: x + y)(5, 3)
+8
+
+# → Lambda functions are single-expression
+# functions that are not necessarily bound
+# to a name (they can be anonymous).
+
+# → Lambda functions can't use regular
+# Python statements and always include an
+# implicit `return` statement.
+```
 
 ```python
 index = <list>.index(<el>)     # Returns first index of item or raises ValueError.
@@ -79,6 +109,8 @@ print (a,b)
 Apple
 Banana
 ```
+
+
 
 ```python
 value  = <dict>.get(key, default=None)          # Returns default if key does not exist.
