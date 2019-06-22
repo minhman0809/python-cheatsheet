@@ -71,6 +71,15 @@ Dictionary
 <view> = <dict>.items()                         # Coll. of key-value tuples.
 ```
 
+```
+d = {'a':'Apple', 'b':'Banana','c':'Carrot'}
+# a,b,c = [d[k] for k in d.keys()]
+a,b,*c = d.values()
+print (a,b)
+Apple
+Banana
+```
+
 ```python
 value  = <dict>.get(key, default=None)          # Returns default if key does not exist.
 value  = <dict>.setdefault(key, default=None)   # Same, but also adds default to dict.
